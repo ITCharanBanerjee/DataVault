@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(225, 37%, 7%);
+  --foreground: hsl(0, 0%, 95%);
+  --card: hsl(225, 25%, 12%);
+  --card-foreground: hsl(0, 0%, 95%);
+  --popover: hsl(225, 25%, 12%);
+  --popover-foreground: hsl(0, 0%, 95%);
+  --primary: hsl(244, 79%, 66%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(225, 25%, 12%);
+  --secondary-foreground: hsl(0, 0%, 95%);
+  --muted: hsl(225, 15%, 20%);
+  --muted-foreground: hsl(0, 0%, 70%);
+  --accent: hsl(225, 25%, 15%);
+  --accent-foreground: hsl(0, 0%, 95%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(225, 15%, 20%);
+  --input: hsl(225, 25%, 15%);
+  --ring: hsl(244, 79%, 66%);
+  --chart-1: hsl(244, 79%, 66%);
+  --chart-2: hsl(159, 100%, 36%);
+  --chart-3: hsl(42, 93%, 56%);
+  --chart-4: hsl(147, 79%, 42%);
+  --chart-5: hsl(341, 75%, 51%);
+  --sidebar: hsl(225, 25%, 12%);
+  --sidebar-foreground: hsl(0, 0%, 95%);
+  --sidebar-primary: hsl(244, 79%, 66%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
+  --sidebar-accent: hsl(225, 25%, 15%);
+  --sidebar-accent-foreground: hsl(0, 0%, 95%);
+  --sidebar-border: hsl(225, 15%, 20%);
+  --sidebar-ring: hsl(244, 79%, 66%);
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: 'JetBrains Mono', Monaco, monospace;
+  --radius: 0.75rem;
+  
+  /* Custom glassmorphism colors */
+  --glass-bg: hsla(0, 0%, 100%, 0.1);
+  --glass-border: hsla(0, 0%, 100%, 0.2);
+  --dark-primary: hsl(225, 37%, 7%);
+  --dark-secondary: hsl(225, 25%, 12%);
+  --dark-accent: hsl(225, 31%, 20%);
+}
+
+.dark {
+  --background: hsl(225, 37%, 7%);
+  --foreground: hsl(0, 0%, 95%);
+  --card: hsl(225, 25%, 12%);
+  --card-foreground: hsl(0, 0%, 95%);
+  --popover: hsl(225, 25%, 12%);
+  --popover-foreground: hsl(0, 0%, 95%);
+  --primary: hsl(244, 79%, 66%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(225, 25%, 12%);
+  --secondary-foreground: hsl(0, 0%, 95%);
+  --muted: hsl(225, 15%, 20%);
+  --muted-foreground: hsl(0, 0%, 70%);
+  --accent: hsl(225, 25%, 15%);
+  --accent-foreground: hsl(0, 0%, 95%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(225, 15%, 20%);
+  --input: hsl(225, 25%, 15%);
+  --ring: hsl(244, 79%, 66%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-gradient-to-br from-dark-primary via-dark-secondary to-dark-accent text-foreground min-h-screen;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .glass-effect {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+  }
+
+  .glass-hover {
+    transition: all 0.3s ease;
+  }
+
+  .glass-hover:hover {
+    background: hsla(0, 0%, 100%, 0.15);
+    transform: translateY(-2px);
+  }
+
+  .gradient-text {
+    background: linear-gradient(45deg, hsl(244, 79%, 66%), hsl(277, 76%, 67%), hsl(159, 76%, 55%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px hsla(244, 79%, 66%, 0.3);
+  }
+
+  .code-preview {
+    background: linear-gradient(145deg, hsl(0, 0%, 12%) 0%, hsl(0, 0%, 18%) 100%);
+    border-left: 3px solid hsl(244, 79%, 66%);
+  }
+
+  .syntax-js { color: hsl(46, 100%, 65%); }
+  .syntax-keyword { color: hsl(300, 30%, 68%); }
+  .syntax-string { color: hsl(25, 50%, 65%); }
+  .syntax-comment { color: hsl(120, 25%, 65%); }
+  .syntax-function { color: hsl(50, 40%, 75%); }
+  .syntax-number { color: hsl(200, 60%, 70%); }
+}
