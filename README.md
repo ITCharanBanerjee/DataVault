@@ -1,3 +1,9 @@
+<img width="1920" height="1080" alt="Screenshot 2026-04-18 140447" src="https://github.com/user-attachments/assets/ed59da62-0f53-48fe-8a96-e61baaaf0c75" />
+<img width="1920" height="1080" alt="Screenshot 2026-04-18 140509" src="https://github.com/user-attachments/assets/0724325d-397b-4f36-871d-8e368b71bed2" />
+<img width="1920" height="1080" alt="Screenshot 2026-04-18 140520" src="https://github.com/user-attachments/assets/7992eb9d-b122-4599-9ab1-fa468d3d600b" />
+<img width="1920" height="1080" alt="Screenshot 2026-04-18 140540" src="https://github.com/user-attachments/assets/4cb4d788-0654-4478-b3fe-a5b1f8ce592b" />
+<img width="1920" height="1080" alt="Screenshot 2026-04-18 140622" src="https://github.com/user-attachments/assets/92a6ab38-36a0-406a-af6d-9af8bb3ad79a" />
+<img width="1920" height="1080" alt="Screenshot 2026-04-18 140638" src="https://github.com/user-attachments/assets/e9eba6b2-e7f5-4ae3-b2f1-08227f3fee23" />
 # DataVault - Code Sharing Platform
 
 A modern full-stack web application for sharing and discovering code snippets with real-time syntax highlighting and collaborative features.
